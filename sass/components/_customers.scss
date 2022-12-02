@@ -1,0 +1,30 @@
+.customers {
+  display: flex;
+  margin: auto;
+  &__link {
+    display: flex;
+    margin: auto;
+    width: 170px;
+    height: 92px;
+    padding: 16px 32px;
+    border: 1px solid $logo-network-color;
+    border-radius: 4px;
+    fill: $logo-network-color;
+    @extend %transition;
+    cursor: pointer;
+  }
+  &__logo {
+    display: flex;
+    margin: auto;
+  }
+  &__item:not(:last-child) {
+    margin-right: $item-work-gap;
+  }
+  &__link:focus,
+  &__link:hover {
+    outline: none;
+    border: 1px solid $accent-color;
+    border-radius: 4px;
+    fill: $accent-color;
+  }
+}

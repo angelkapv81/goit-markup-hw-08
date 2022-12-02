@@ -1,0 +1,42 @@
+$text-color: #757575;
+$title-color: #212121; // основний колір
+$hero-color: #ffffff;  // колір героя
+$accent-color: #2196f3;// колір акцента
+$background-color-hero: #2f303a; // колір фону героя
+$bg-color: #f5f4fa; // колір фону документа
+$logo-network-color: #afb1b8; 
+$item-work-gap: 30px;
+$logoheader-color: #000000;
+$card-color: #eeeeee;
+$border-color: #ececec;
+$active-color: #188ce8;
+$footer-color: #ffffff60;
+$active-footer-color:  rgba(33, 150, 243, 1);
+$font-body: "Roboro";
+$font-weblogo: "Raleway";
+
+%transition {
+  animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+transition-duration: 250ms;
+}
+
+@mixin networklogo($fillcolor: $hero-color, $backgroundcolor: rgba(255, 255, 255, 0.1)) {
+  display: flex;
+  height: 44px;
+  width: 44px;
+  border-radius: 50%;
+  fill: $fillcolor;
+  background-color: $backgroundcolor;
+  justify-content: center;
+  align-items: center;
+  @extend %transition;
+  cursor: pointer;
+}
+
+@mixin weblogo($color) {
+  color: $color;
+  font-family: $font-weblogo;
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 1.19;
+}

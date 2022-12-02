@@ -1,0 +1,141 @@
+.footer {
+  margin-left: auto;
+  margin-right: auto;
+  background-color: $background-color-hero;
+  padding: 60px 0;
+}
+.footer-network {
+  display: flex;
+  &__img {
+    fill: $hero-color;
+    display: flex;
+    margin: auto;
+  }
+  &__item:not(:last-child) {
+    margin-right: 10px;
+  }
+  &__logo {
+    @include networklogo();
+    &:hover,
+    &:focus {
+      outline: none;
+      background-color: $accent-color;
+    }
+  }
+}
+
+.join {
+  margin-bottom: 20px;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.63;
+  color: $hero-color;
+}
+
+.main-nav__text--inverse {
+  @include weblogo($hero-color);
+}
+
+.logoweb {
+  color: $accent-color;
+}
+.address {
+  margin-right: 70px;
+  margin-top: 20px;
+  font-style: normal;
+
+  &__email {
+    display: inline-block;
+    color: $footer-color;
+    font-size: 14px;
+    line-height: 1.71;
+    margin-bottom: 9px;
+    border: 0;
+    cursor: pointer;
+    @extend %transition;
+  }
+  &__footer {
+    color: $hero-color;
+    font-size: 14px;
+    line-height: 1.71;
+    margin: 0;
+    margin-bottom: 9px;
+    display: inline-block;
+    border: 0;
+  }
+  &__tel {
+    display: inline-block;
+    color: $footer-color;
+    font-size: 14px;
+    line-height: 1.71;
+    border: 0;
+    @extend %transition;
+    cursor: pointer;
+  }
+}
+
+.foot-address {
+  display: flex;
+}
+
+.foot-network {
+  padding-top: 12px;
+}
+
+.address__email:hover,
+.address__email:focus,
+.address__tel:hover,
+.address__tel:focus {
+  color: $accent-color;
+}
+.footer-sign {
+  display: flex;
+  flex-direction: column;
+  padding-top: 12px;
+}
+
+.footer-sign-sign {
+  display: flex;
+  justify-content: center;
+}
+
+.input-sign {
+  border: 1px solid transparent;
+  width: 358px;
+  height: 50px;
+  border-color: rgba(255, 255, 255, 0.1);
+  border-radius: 4px;
+  background-color: $background-color-hero;
+  padding-left: 16px;
+  display: flex;
+}
+
+.button-sign {
+  width: 200px;
+  height: 50px;
+  margin-left: 12px;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: calc(30 / 16);
+  color: $hero-color;
+  letter-spacing: 0.06em;
+  background-color: $active-color;
+  border-radius: 4px;
+  fill: $bg-color;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  cursor: pointer;
+  @extend %transition;
+  &:hover,
+  &:focus,
+  &:active {
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    background-color: $active-footer-color;
+  }
+
+  &__icon {
+    margin-left: 10px;
+  }
+}

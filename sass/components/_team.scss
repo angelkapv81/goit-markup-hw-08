@@ -1,0 +1,37 @@
+/* співробітники */
+.t-person {
+  background-color: $bg-color;
+  margin-left: auto;
+  margin-right: auto;
+}
+.team {
+  display: flex;
+  &__person {
+    background-color: $hero-color;
+    border: 0;
+    border-radius: 0px 0px 4px 4px;
+    margin-right: $item-work-gap;
+    box-shadow: 0px 2px 1px rgba(0, 0, 0, 0.2), 0px 1px 1px rgba(0, 0, 0, 0.14),
+      0px 1px 3px rgba(0, 0, 0, 0.12);
+  }
+  &_person:nth-child(4n) {
+    margin-right: 0;
+  }
+  &__name {
+    margin-top: $item-work-gap;
+    margin-bottom: 0;
+    color: $title-color;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.19;
+    text-align: center;
+  }
+  &__position {
+    margin-top: 10px;
+    margin-bottom: 16px;
+    color: $text-color;
+    font-size: 16px;
+    line-height: 1.19;
+    text-align: center;
+  }
+}

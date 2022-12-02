@@ -1,0 +1,216 @@
+.modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  height: 581px;
+  width: 528px;
+  background-color: $hero-color;
+  box-shadow: 0 2px 1px rgba(0, 0, 0, 0.2), 0 1px 1px rgba(0, 0, 0, 0.14),
+    0 1px 3px rgba(0, 0, 0, 0.12);
+}
+
+.modal-contact {
+  padding: 40px;
+
+  &__title {
+    font-weight: 700;
+    font-size: 20px;
+    line-height: calc(23 / 20);
+    color: $title-color;
+    margin-bottom: 12px;
+  }
+
+  &__group {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+  }
+
+  &__icon {
+    position: absolute;
+    transform: translateY(50%);
+    display: flex;
+    top: 8px;
+    left: 15px;
+    @extend %transition;
+  }
+
+  &__label {
+    font-size: 12px;
+    line-height: calc(14 / 12);
+    letter-spacing: 0.01em;
+    margin-bottom: 4px;
+    display: flex;
+  }
+
+  &__input {
+    height: 40px;
+    width: 100%;
+    border-radius: 4px;
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    padding: 11px 12px 11px 42px;
+  }
+}
+
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.2);
+  background-color: rgba(0, 0, 0, 0.2);
+  z-index: 1;
+  @extend %transition;
+}
+
+.backdrop.is-hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.close {
+  outline: none;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  background-color: $hero-color;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  &:hover {
+    fill: $accent-color;
+  }
+}
+
+// ---------------- Форма ------------------ //
+
+.mail-sign {
+  display: flex;
+  margin-left: 93px;
+}
+
+.label-sign-footer {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.63;
+  color: $hero-color;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+
+.form-group-agrees {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+  &__checkbox {
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    line-height: calc(24 / 14);
+    letter-spacing: 0.03em;
+    color: $text-color;
+  }
+  &__input {
+    position: absolute;
+    white-space: nowrap;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    border: 0;
+    padding: 0;
+    clip: rect(0 0 0 0);
+    clip-path: inset(50%);
+    margin: -1px;
+  }
+  &__contract {
+    color: $accent-color;
+  }
+
+  &__input:focus + &__icon,
+  &__input:hover + &__icon {
+    border: 2px solid $accent-color;
+    border-color: $accent-color;
+    border-radius: 4px;
+  }
+
+  &__input:checked + &__icon {
+    background-image: url(../images/icon-check.jpg);
+    background-origin: border-box;
+    border: $accent-color;
+  }
+
+  &__submit {
+    width: 200px;
+    height: 50px;
+    background-color: $active-color;
+    outline: none;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: calc(30 / 16);
+    letter-spacing: 0.06em;
+    color: $hero-color;
+    border-radius: 4px;
+    border: none;
+    margin-top: 30px;
+    padding: 0;
+    @extend %transition;
+    cursor: pointer;
+    &:focus,
+    &:hover {
+      box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+      background-color: $accent-color;
+    }
+  }
+}
+
+span[class="form-group-agrees__icon"] {
+  margin-right: 8px;
+  width: 16px;
+  height: 15px;
+  border: 2px solid $title-color;
+  border-radius: 4px;
+}
+
+.modal-contact__input:focus {
+  fill: $accent-color;
+}
+
+textarea {
+  resize: none;
+  padding: 12px 16px;
+  height: 120px;
+  width: 100%;
+  border-radius: 4px;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  @extend %transition;
+  &::placeholder {
+    color: rgba(117, 117, 117, 0.5);
+  }
+}
+
+textarea:focus,
+textarea:hover,
+textarea:active,
+input:focus,
+input:hover,
+input:active {
+  outline: none;
+  border: 1px solid $accent-color;
+}
+
+input:focus + .modal-contact__icon,
+input:hover + .modal-contact__icon,
+input:active + .modal-contact__icon {
+  fill: $accent-color;
+}

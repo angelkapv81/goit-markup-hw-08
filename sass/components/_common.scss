@@ -1,0 +1,55 @@
+body {
+  color: $text-color;
+  letter-spacing: 0.03em;
+  background-color: $hero-color;
+  font-family: $font-body, sans-serif;
+  border: 0;
+  margin: 0;
+}
+
+.container {
+  margin-left: auto;
+  margin-right: auto;
+  width: 1200px;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+.site-nav__link,
+.main-nav__logo,
+.site-nav-contact__link,
+.main-nav__text--inverse,
+.address__email,
+.address__tel {
+  text-decoration: none;
+  @extend %transition;
+}
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+section {
+  padding-top: 94px;
+  padding-bottom: 94px;
+}
+ul,
+p,
+h2 {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+.main-headline {
+  padding-top: 0;
+}
+
+.headline {
+  margin-top: 0;
+  margin-bottom: 50px;
+  color: $title-color;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.17;
+  text-align: center;
+}
