@@ -15,10 +15,17 @@ $active-footer-color:  rgba(33, 150, 243, 1);
 $font-body: "Roboro";
 $font-weblogo: "Raleway";
 
+// ------------ Breakpoints -----------
+$phone: 480px;
+$tablet: 768px;
+$desktop: 1200px;
+// -------------------------------------
+
 %transition {
   animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 transition-duration: 250ms;
 }
+
 
 @mixin networklogo($fillcolor: $hero-color, $backgroundcolor: rgba(255, 255, 255, 0.1)) {
   display: flex;

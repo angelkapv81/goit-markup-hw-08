@@ -1,5 +1,8 @@
+
+
 /* робота */
 .images-work {
+
   display: flex;
   justify-content: center;
   &__item {
@@ -26,3 +29,11 @@
   line-height: 1.14;
 }
 }
+
+@media (max-width: $desktop) {
+  .main-headline {
+  display: none;
+      }
+  }
+    
+ 
