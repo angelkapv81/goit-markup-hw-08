@@ -1,119 +1,120 @@
-.portfolio-main {
-  border-top: 1px solid $border-color;
-}
+// .main-nav {
+//     margin: -15px;
+//     }
 
-.bt-portfolio {
-  display: flex;
-  justify-content: center;
-  margin-bottom: 50px;
-  &__item:not(:last-child) {
-    margin-right: 8px;
-  }
-  &__button {
-    padding: 6px 22px;
-    color: $title-color;
-    background-color: $bg-color;
-    font-weight: 500;
-    font-size: 16px;
-    line-height: 1.63;
-    border: 0;
-    border-radius: 4px;
-    @extend %transition;
-    cursor: pointer;
-  }
-  &__button:hover,
-  &__button:focus {
-    outline: none;
-    color: $hero-color;
-    background-color: $accent-color;
-    box-shadow: 0 2px 2px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.08),
-      0 3px 1px rgba(0, 0, 0, 0.1);
-  }
-}
-// приклади робіт
-.visually-hidden {
-  position: absolute;
-  white-space: nowrap;
-  width: 1px;
-  height: 1px;
-  overflow: hidden;
-  border: 0;
-  padding: 0;
-  clip: rect(0 0 0 0);
-  clip-path: inset(50%);
-  margin: -1px;
-}
 
-.work {
-  display: flex;
-  flex-wrap: wrap;
-  padding: 0;
-  margin: 0;
-  margin-left: calc(-1 * $item-work-gap);
-  margin-top: calc(-1 * $item-work-gap);
-  &__item {
-    flex-basis: calc(100% / 3 - $item-work-gap);
-    margin-left: $item-work-gap;
-    margin-top: $item-work-gap;
-    @extend %transition;
-  }
-}
-.card {
-  outline: none;
-  text-decoration: none;
-  @extend %transition;
-  &__thumb {
-    position: absolute;
-    top: 100%;
-    left: 0;
-    opacity: 0;
-    @extend %transition;
-  }
-  &:hover &__thumb,
-  &:focus &__thumb {
-    opacity: 1;
-    transform: translateY(-100%);
-  }
-  &__text {
-    line-height: calc(28 / 18);
-    letter-spacing: 0.03em;
-    background-color: rgba(33, 150, 243, 0.9);
-    color: $hero-color;
-    font-weight: 400;
-    font-size: 18px;
-    width: 370px;
-    height: 294px;
-    padding: 63px 24px;
-  }
-  &__img {
-    position: relative;
-    overflow: hidden;
-  }
-  &__project {
-    color: $title-color;
-    font-weight: 700;
-    font-size: 18px;
-    line-height: 2;
-    letter-spacing: 0.06em;
-    padding-left: 24px;
-    padding-top: 20px;
-  }
-  &__example {
-    color: $text-color;
-    font-size: 16px;
-    line-height: 1.88;
-    margin-top: 4px;
-    padding-left: 24px;
-    padding-bottom: 20px;
-  }
-  &__name {
-    border: 1px solid $card-color;
-    @extend %transition;
-  }
-}
+// // .portfolio-main {
+// //   border-top: 1px solid $border-color;
+// // }
 
-.work__item .card:focus .card__name,
-.work__item:hover {
-  box-shadow: 1px 4px 6px rgba(0, 0, 0, 0.16), 0px 4px 4px rgba(0, 0, 0, 0.06),
-    0px 1px 1px rgba(0, 0, 0, 0.12);
-}
+// // .bt-portfolio {
+// //   display: flex;
+// //   justify-content: center;
+// //   margin-bottom: 50px;
+// //   &__item:not(:last-child) {
+// //     margin-right: 8px;
+// //   }
+// //   &__button {
+// //     padding: 6px 22px;
+// //     color: $title-color;
+// //     background-color: $bg-color;
+// //     font-weight: 500;
+// //     font-size: 16px;
+// //     line-height: 1.63;
+// //     border: 0;
+// //     border-radius: 4px;
+// //     @extend %transition;
+// //     cursor: pointer;
+// //   }
+// //   &__button:hover,
+// //   &__button:focus {
+// //     outline: none;
+// //     color: $hero-color;
+// //     background-color: $accent-color;
+// //     box-shadow: 0 2px 2px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.08),
+// //       0 3px 1px rgba(0, 0, 0, 0.1);
+// //   }
+// // }
+// // // приклади робіт
+
+
+// .work {
+// //   display: flex;
+// //   flex-wrap: wrap;
+//   padding: 0;
+//   margin: 0;
+//   margin-left: calc(-1 * $item-work-gap);
+//   margin-top: calc(-1 * $item-work-gap);
+//   &__item {
+//     margin-left: auto;
+//     margin-right: auto;
+//     // flex-basis: calc(100% / 3 - $item-work-gap);
+//     // margin-left: $item-work-gap;
+//     // margin-top: $item-work-gap;
+//     @extend %transition;
+//   }
+// }
+// .card {
+//    outline: none;
+//    text-decoration: none;
+//    @extend %transition;
+//    &__thumb {
+//      position: absolute;
+//      top: 100%;
+//      left: 0;
+//      opacity: 0;
+//      @extend %transition;
+//    }
+//    &:hover &__thumb,
+//    &:focus &__thumb {
+//      opacity: 1;
+//      transform: translateY(-100%);
+//    }
+//    &__text {
+//      line-height: calc(28 / 18);
+//      letter-spacing: 0.03em;
+//      background-color: rgba(33, 150, 243, 0.9);
+//      color: $hero-color;
+//      font-weight: 400;
+//   font-size: 18px;
+// //     width: 370px;
+// width: 450px;
+//  height: 294px;
+// //     padding: 63px 24px;
+//  }
+
+
+
+//    &__img {
+//      position: relative;
+//  overflow: hidden;
+//   }
+//   &__project {
+//     color: $title-color;
+//     font-weight: 700;
+//     font-size: 18px;
+//     line-height: 2;
+//     letter-spacing: 0.06em;
+//     // padding-left: 24px;
+//     // padding-top: 20px;
+//   }
+//   &__example {
+//     color: $text-color;
+//     font-size: 16px;
+//     line-height: 1.88;
+//     // margin-top: 4px;
+//     // padding-left: 24px;
+//     // padding-bottom: 20px;
+//   }
+//   &__name {
+//     border: 1px solid $card-color;
+//     @extend %transition;
+//   }
+// }
+
+// .work__item .card:focus .card__name,
+// .work__item:hover {
+//   box-shadow: 1px 4px 6px rgba(0, 0, 0, 0.16), 0px 4px 4px rgba(0, 0, 0, 0.06),
+//     0px 1px 1px rgba(0, 0, 0, 0.12);
+// }
+

@@ -1,25 +1,42 @@
-/* співробітники */
+// /* співробітники */
+
+
 .t-person {
+    // padding: 60px 15px;
   background-color: $bg-color;
-  margin-left: auto;
-  margin-right: auto;
+  
+
+    @media screen and (max-width: $desktop) {
+        max-width: 1181px; 
+        }   
+
+
+
 }
+
+
 .team {
-  display: flex;
+
   &__person {
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    align-items: center;
+    justify-content: center;
+width: 450px;
+
     background-color: $hero-color;
     border: 0;
     border-radius: 0px 0px 4px 4px;
-    margin-right: $item-work-gap;
+
     box-shadow: 0px 2px 1px rgba(0, 0, 0, 0.2), 0px 1px 1px rgba(0, 0, 0, 0.14),
       0px 1px 3px rgba(0, 0, 0, 0.12);
   }
-  &_person:nth-child(4n) {
-    margin-right: 0;
-  }
+
+
+
   &__name {
-    margin-top: $item-work-gap;
-    margin-bottom: 0;
+    
     color: $title-color;
     font-weight: 500;
     font-size: 16px;
@@ -27,12 +44,46 @@
     text-align: center;
   }
   &__position {
-    margin-top: 10px;
-    margin-bottom: 16px;
-    color: $text-color;
+        color: $text-color;
     font-size: 16px;
     line-height: 1.19;
     text-align: center;
   }
 }
 
+@media screen and (min-width: $tablet ) and (max-width: $desktop) {
+ 
+ .team   {
+        display: flex;
+   flex-wrap: wrap;
+   
+ align-items: center;  
+ justify-content: center;
+ }
+
+ .team__person {
+ max-width: 354px;
+ margin: 15px;
+ width: calc((100% - 2 * 30px) / 2);
+         }
+   }
+  @media screen and (min-width: $desktop) {
+    .team {
+        display: flex;
+    }
+    .team__position {
+    margin-top: 10px;
+    margin-bottom: 16px;
+    }
+    .team__name {
+margin-top: $item-work-gap;
+margin-bottom: 0;
+    }
+
+.team__person {
+margin-right: $item-work-gap;
+}
+   .team__person:nth-child(4n) {
+     margin-right: 0;
+}
+}

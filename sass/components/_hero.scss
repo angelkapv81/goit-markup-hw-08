@@ -2,30 +2,50 @@
   text-align: center;
   background-color: $background-color-hero;
   padding: 200px 0;
-  max-width: 1600px;
-  margin-left: auto;
-  margin-right: auto;
+  width: 100%;
+  max-width: $tablet;
+
+  
   background-image: linear-gradient(
       to right,
       rgba(47, 48, 58, 0.4),
       rgba(47, 48, 58, 0.4)
     ),
     url("../images/hero.jpg");
+
+  @media screen and (min-width: $tablet) and (max-width: $desktop) {
+    
+    max-width: $desktop;
+    
+  }
+  @media screen and (min-width: $desktop) {
+
+    max-width: 1600px;
+    
+  }
 }
 .hero {
   margin-bottom: 0;
   margin-top: 0;
   color: $hero-color;
   font-weight: 900;
-  font-size: 44px;
-  line-height: 1.36;
+  font-size: 26px;
+  line-height: calc(42 / 26);
   letter-spacing: 0.06em;
   text-align: center;
+
+  @media screen and (min-width: $desktop) {
+    font-size: 44px;
+    line-height: 1.36;
+  }
 }
-/* кнопка*/
+
+// /* кнопка*/
 .hero-button {
-  padding: 10px 32px;
-  margin-top: 30px;
+    height: 50px;
+    width: 200px;
+  //   padding: 10px 32px;
+  //   margin-top: 30px;
   font-family: Roboto, sans-serif;
   cursor: pointer;
   color: $hero-color;
@@ -37,9 +57,11 @@
   letter-spacing: 0.06em;
   border-radius: 4px;
   @extend %transition;
-  &:hover,
-  &:focus {
+
+   &:hover,
+   &:focus {
     background-color: $active-color;
     border: $active-color;
+   }
   }
-}
+
