@@ -50,7 +50,14 @@ img {
   padding-bottom: 60px;
   padding-left: 15px;
   padding-right: 15px;
+
+  @media screen and (min-width: $desktop) {
+    padding-top: 94px;
+    padding-bottom: 94px;
+  }
 }
+
+
 section {
   
   margin-left: auto;

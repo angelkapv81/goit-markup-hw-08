@@ -36,6 +36,7 @@
     margin-left: auto;
     margin-right: auto;
     justify-content: center;
+    
   }
 }
 
@@ -48,6 +49,7 @@
 
 .main-nav__text--inverse {
   @include weblogo($hero-color);
+ 
 }
 
 .logoweb {
@@ -106,69 +108,73 @@
     margin-bottom: 0;
     margin-left: 165px;
   }
-  .main-nav__logo {
-    @media screen and (min-width: $tablet) and (max-width: $desktop) {
-      margin-left: 115px;
-    }
+}
+.main-nav__logo {
+  @media screen and (min-width: $tablet) and (max-width: $desktop) {
+    margin-left: 115px;
+   
+   
   }
-  .mail-sign {
-    margin-top: 60px;
-    @media screen and (min-width: $tablet) and (max-width: $desktop) {
-      display: flex;
-      margin-left: auto;
-      margin-right: auto;
-      margin-top: 60px;
-    }
-  }
-  .address__email:hover,
-  .address__email:focus,
-  .address__tel:hover,
-  .address__tel:focus {
-    color: $accent-color;
-  }
-  // .footer-sign {
-  //   display: flex;
-  //   flex-direction: column;
-  //   padding-top: 12px;
-  // }
-
-  .footer-sign-sign {
-    display: block;
-    justify-content: center;
-  }
-
-  .input-sign {
-    border: 1px solid transparent;
-    width: 358px;
-    height: 50px;
-    border-color: rgba(255, 255, 255, 0.1);
-    border-radius: 4px;
-    background-color: $background-color-hero;
-    //   padding-left: 16px;
+}
+.mail-sign {
+  @media screen and (min-width: $tablet) and (max-width: $desktop) {
     display: flex;
-  }
-
-  .button-sign {
-    display: flex;
-    width: 200px;
-    height: 50px;
     justify-content: center;
-    align-items: center;
     margin-left: auto;
     margin-right: auto;
-    margin-top: 20px;
-    font-weight: 700;
-    font-size: 16px;
-    line-height: calc(30 / 16);
-    color: $hero-color;
-    letter-spacing: 0.06em;
-    background-color: $active-color;
-    border-radius: 4px;
-    fill: $bg-color;
-    border: none;
-    cursor: pointer;
-    @extend %transition;
+    margin-top: 60px;
   }
+}
+.address__email:hover,
+.address__email:focus,
+.address__tel:hover,
+.address__tel:focus {
+  color: $accent-color;
+}
+//   .footer-sign-sign {
+//   display: flex;
+//    flex-direction: column;
+//   //   padding-top: 12px;
+//   }
+
+.footer-sign-sign {
+  display: block;
+  justify-content: center;
+  // flex-direction: column;
+}
+
+.input-sign {
+  border: 1px solid transparent;
+  width: 358px;
+  height: 50px;
+  border-color: rgba(255, 255, 255, 0.1);
+  border-radius: 4px;
+  background-color: $background-color-hero;
+  //   padding-left: 16px;
+  // display: flex;
+}
+
+.button-sign {
+  display: flex;
+  width: 200px;
+  height: 50px;
+  justify-content: center;
+  align-items: center;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 20px;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: calc(30 / 16);
+  color: $hero-color;
+  letter-spacing: 0.06em;
+  background-color: $active-color;
+  border-radius: 4px;
+  fill: $bg-color;
+  border: none;
+  cursor: pointer;
+  @extend %transition;
+
   &:hover,
   &:focus,
   &:active {
@@ -193,5 +199,4 @@
   letter-spacing: 0.03em;
   text-transform: uppercase;
   margin-bottom: 20px;
-  margin-top: 60px;
 }
