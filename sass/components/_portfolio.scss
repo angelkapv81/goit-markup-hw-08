@@ -1,120 +1,195 @@
-// .main-nav {
-//     margin: -15px;
-//     }
+.work-img {
+  margin-left: auto;
+  margin-right: auto;
+  @include dq(only-tablet) {
+    max-width: $tablet;
+  }
+
+  @include dq(desktop) {
+    max-width: $desktop;
+  }
+}
+
+.portfolio-main {
+  border-top: 1px solid $border-color;
+}
+
+.bt-portfolio {
+  display: flex;
+
+  @include dq(only-phone) {
+    flex-wrap: wrap;
+    justify-content: flex-start;
+  }
+
+  justify-content: center;
+  margin-bottom: 40px;
+
+  @include dq(only-tablet) {
+    margin-bottom: 30px;
+  }
+
+  @include dq(desktop) {
+    margin-bottom: 50px;
+  }
+  &__item:not(:last-child) {
+    margin-right: 8px;
+  }
+  &__item:nth-child(3) {
+    @include dq(only-phone) {
+      margin-right: calc(100% - 2 * 8px - 73px - 112px - 125px);
+    }
+  }
+  &__item:nth-child(4),
+  &__item:nth-child(5) {
+    @include dq(only-phone) {
+      margin-top: 15px;
+    }
+  }
+
+  &__button {
+    padding: 6px 22px;
+    color: $title-color;
+    background-color: $bg-color;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.63;
+    border: 0;
+    border-radius: 4px;
+    @extend %transition;
+    cursor: pointer;
+  }
+  &__button:hover,
+  &__button:focus {
+    outline: none;
+    color: $hero-color;
+    background-color: $accent-color;
+    box-shadow: 0 2px 2px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.08),
+      0 3px 1px rgba(0, 0, 0, 0.1);
+  }
+}
+
+// приклади робіт
+
+.work {
+  display: column;
+  padding: 0;
+  margin: 0;
+  //   margin-left: calc(-1 * $item-work-gap);
+  //   margin-top: calc(-1 * $item-work-gap);
+  &__item {
+    width: 450px;
+
+    margin-left: auto;
+    margin-right: auto;
+
+    // flex-basis: 450px;
+
+    //     // flex-basis: calc(100% / 3 - $item-work-gap);
+    //     // margin-left: $item-work-gap;
+    //     // margin-top: $item-work-gap;
+    @extend %transition;
+  }
+}
+
+.card {
+  //   width: 450px;
+  outline: none;
+  text-decoration: none;
+  @extend %transition;
+  &__thumb {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    opacity: 0;
+    @extend %transition;
+  }
+  &:hover &__thumb,
+  &:focus &__thumb {
+    opacity: 1;
+    transform: translateY(-100%);
+  }
+  &__text {
+    // width: 450px;
+    line-height: calc(28 / 18);
+    letter-spacing: 0.03em;
+    background-color: rgba(33, 150, 243, 0.9);
+    color: $hero-color;
+    font-weight: 400;
+    font-size: 18px;
+
+    // //     width: 370px;
+
+    height: 294px;
+    padding: 77px 24px;
+  }
+
+  &__img {
+    position: relative;
+    overflow: hidden;
+  }
+  &__project {
+    color: $title-color;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 2;
+    letter-spacing: 0.06em;
+  }
+  &__example {
+    color: $text-color;
+    font-size: 16px;
+    line-height: 1.88;
+    margin-top: 4px;
+  }
+  &__name {
+    width: 450px;
+    padding: 20px 24px;
+    outline: 1px solid $card-color;
+    @extend %transition;
+  }
+}
+
+.work__item .card:focus .card__name,
+.work__item:hover {
+  box-shadow: 1px 4px 6px rgba(0, 0, 0, 0.16), 0px 4px 4px rgba(0, 0, 0, 0.06),
+    0px 1px 1px rgba(0, 0, 0, 0.12);
+}
+
+@include dq(only-tablet) {
+  .work {
+    display: flex;
+    flex-wrap: wrap;
+    margin: -15px;
+  }
+
+  .work__item {
+    max-width: 354px;
+    margin: 15px;
+    width: calc((100% - 2 * 30px) / 2);
+  }
+
+  .card__name {
+    width: 354px;
+    &--first { // Модифікатор першої картки
+        padding: 20px 24px 56px 24px;
+      }
+  }
 
 
-// // .portfolio-main {
-// //   border-top: 1px solid $border-color;
-// // }
+}
 
-// // .bt-portfolio {
-// //   display: flex;
-// //   justify-content: center;
-// //   margin-bottom: 50px;
-// //   &__item:not(:last-child) {
-// //     margin-right: 8px;
-// //   }
-// //   &__button {
-// //     padding: 6px 22px;
-// //     color: $title-color;
-// //     background-color: $bg-color;
-// //     font-weight: 500;
-// //     font-size: 16px;
-// //     line-height: 1.63;
-// //     border: 0;
-// //     border-radius: 4px;
-// //     @extend %transition;
-// //     cursor: pointer;
-// //   }
-// //   &__button:hover,
-// //   &__button:focus {
-// //     outline: none;
-// //     color: $hero-color;
-// //     background-color: $accent-color;
-// //     box-shadow: 0 2px 2px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.08),
-// //       0 3px 1px rgba(0, 0, 0, 0.1);
-// //   }
-// // }
-// // // приклади робіт
-
-
-// .work {
-// //   display: flex;
-// //   flex-wrap: wrap;
-//   padding: 0;
-//   margin: 0;
-//   margin-left: calc(-1 * $item-work-gap);
-//   margin-top: calc(-1 * $item-work-gap);
-//   &__item {
-//     margin-left: auto;
-//     margin-right: auto;
-//     // flex-basis: calc(100% / 3 - $item-work-gap);
-//     // margin-left: $item-work-gap;
-//     // margin-top: $item-work-gap;
-//     @extend %transition;
-//   }
-// }
-// .card {
-//    outline: none;
-//    text-decoration: none;
-//    @extend %transition;
-//    &__thumb {
-//      position: absolute;
-//      top: 100%;
-//      left: 0;
-//      opacity: 0;
-//      @extend %transition;
-//    }
-//    &:hover &__thumb,
-//    &:focus &__thumb {
-//      opacity: 1;
-//      transform: translateY(-100%);
-//    }
-//    &__text {
-//      line-height: calc(28 / 18);
-//      letter-spacing: 0.03em;
-//      background-color: rgba(33, 150, 243, 0.9);
-//      color: $hero-color;
-//      font-weight: 400;
-//   font-size: 18px;
-// //     width: 370px;
-// width: 450px;
-//  height: 294px;
-// //     padding: 63px 24px;
-//  }
-
-
-
-//    &__img {
-//      position: relative;
-//  overflow: hidden;
-//   }
-//   &__project {
-//     color: $title-color;
-//     font-weight: 700;
-//     font-size: 18px;
-//     line-height: 2;
-//     letter-spacing: 0.06em;
-//     // padding-left: 24px;
-//     // padding-top: 20px;
-//   }
-//   &__example {
-//     color: $text-color;
-//     font-size: 16px;
-//     line-height: 1.88;
-//     // margin-top: 4px;
-//     // padding-left: 24px;
-//     // padding-bottom: 20px;
-//   }
-//   &__name {
-//     border: 1px solid $card-color;
-//     @extend %transition;
-//   }
-// }
-
-// .work__item .card:focus .card__name,
-// .work__item:hover {
-//   box-shadow: 1px 4px 6px rgba(0, 0, 0, 0.16), 0px 4px 4px rgba(0, 0, 0, 0.06),
-//     0px 1px 1px rgba(0, 0, 0, 0.12);
-// }
-
+@include dq(desktop) {
+  .work {
+    display: flex;
+    flex-wrap: wrap;
+    margin: -15px;
+  }
+  .work__item {
+    max-width: 370px;
+    margin: 15px;
+    width: calc((100% - 3 * 30px) / 3);
+  }
+  .card__name {
+    width: 370px;
+  }
+}

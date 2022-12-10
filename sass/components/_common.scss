@@ -56,8 +56,6 @@ img {
     padding-bottom: 94px;
   }
 }
-
-
 section {
   
   margin-left: auto;
@@ -82,10 +80,13 @@ h2 {
 
 .headline {
   margin-top: 0;
-  margin-bottom: 50px;
+  margin-bottom: 30px;
   color: $title-color;
   font-weight: 700;
   font-size: 36px;
   line-height: 1.17;
   text-align: center;
+  @include dq(desktop) {
+    margin-bottom: 50px;
+}
 }

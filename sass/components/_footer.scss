@@ -2,12 +2,11 @@
   display: block;
   text-align: center;
   background-color: $background-color-hero;
-}
+  }
 .footer-network {
   display: block;
   margin-top: 20px;
-  // margin-bottom: 60px;
-  justify-content: center;
+    justify-content: center;
   display: flex;
   &__img {
     fill: $hero-color;
@@ -30,7 +29,7 @@
     }
   }
 }
-@media screen and (min-width: $tablet) and (max-width: $desktop) {
+@include dq(only-tablet) {
   .cont-footer {
     display: flex;
     margin-left: auto;
@@ -40,6 +39,15 @@
   }
 }
 
+@include dq(desktop){
+    .cont-footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+}
 .join {
   font-weight: 700;
   font-size: 14px;
@@ -56,18 +64,14 @@
   color: $accent-color;
 }
 .address {
-  //   margin-right: 70px;
-  //   margin-top: 20px;
-  font-style: normal;
+    font-style: normal;
   margin-top: 20px;
 
   &__email {
-    //     display: inline-block;
-    color: $footer-color;
+        color: $footer-color;
     font-size: 14px;
     line-height: 1.71;
-    // margin-bottom: 8px;
-    border: 0;
+        border: 0;
     cursor: pointer;
     @extend %transition;
   }
@@ -76,8 +80,7 @@
     font-size: 14px;
     line-height: 1.71;
     margin: 0;
-    // margin-bottom: 8px;
-    display: inline-block;
+        display: inline-block;
     border: 0;
   }
   &__tel {
@@ -90,34 +93,17 @@
     cursor: pointer;
   }
 }
-
-// .addres { @media screen and (min-width: $tablet ) and (max-width: $desktop) {
-//         margin-left: 76px;}
-
-// }
-
-// .foot-address {
-//   display: flex;
-// }
-
 .foot-network {
   margin-top: 60px;
   margin-bottom: 60px;
-  @media screen and (min-width: $tablet) and (max-width: $desktop) {
+  @include dq(only-tablet) {
     margin-top: 0;
     margin-bottom: 0;
     margin-left: 165px;
   }
 }
-.main-nav__logo {
-  @media screen and (min-width: $tablet) and (max-width: $desktop) {
-    margin-left: 115px;
-   
-   
-  }
-}
 .mail-sign {
-  @media screen and (min-width: $tablet) and (max-width: $desktop) {
+    @include dq(only-tablet) {
     display: flex;
     justify-content: center;
     margin-left: auto;
@@ -131,16 +117,11 @@
 .address__tel:focus {
   color: $accent-color;
 }
-//   .footer-sign-sign {
-//   display: flex;
-//    flex-direction: column;
-//   //   padding-top: 12px;
-//   }
 
 .footer-sign-sign {
   display: block;
   justify-content: center;
-  // flex-direction: column;
+
 }
 
 .input-sign {
@@ -150,8 +131,7 @@
   border-color: rgba(255, 255, 255, 0.1);
   border-radius: 4px;
   background-color: $background-color-hero;
-  //   padding-left: 16px;
-  // display: flex;
+ 
 }
 
 .button-sign {
@@ -186,10 +166,7 @@
     margin-left: 10px;
   }
 }
-// .mail-sign {
-//     display: flex;
-//     margin-left: 93px;
-//   }
+
 
 .label-sign-footer {
   font-weight: 700;
@@ -199,4 +176,37 @@
   letter-spacing: 0.03em;
   text-transform: uppercase;
   margin-bottom: 20px;
+}
+@include dq(desktop) {
+.mail-sign {
+    display: flex;
+    margin-left: 93px;
+  }
+  .footer-sign-sign {
+  display: flex;
+   flex-direction: column;
+  padding-top: 12px;
+  }
+
+  .input-sign {
+   padding-left: 16px;
+  display: flex;
+  }
+  .address {
+      margin-right: 70px;
+    margin-top: 20px;
+  }
+  .address__footer {
+    margin-bottom: 8px;
+  }
+  .address__email {
+         display: inline-block;
+     margin-bottom: 8px;
+  }
+  .footer-sign-sign {
+  flex-direction: column;
+  }
+  .footer-network {
+    margin-bottom: 60px;
+  }
 }

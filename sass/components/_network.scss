@@ -1,7 +1,14 @@
 .network {
   display: flex;
   justify-content: center;
-  margin-bottom: $item-work-gap;
+  padding-bottom: 24px;
+
+  @include dq(desktop) {
+  padding-bottom: $item-work-gap;
+}
+
+
+
   &__link {
     @include networklogo($logo-network-color, none);
   }
