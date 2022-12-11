@@ -15,7 +15,7 @@ body {
   color: #757575;
   letter-spacing: 0.03em;
   background-color: #ffffff;
-  font-family: "Roboro", sans-serif;
+  font-family: "Roboto", sans-serif;
   border: 0;
   margin: 0;
 }
@@ -98,6 +98,17 @@ h2 {
   .headline {
     margin-bottom: 50px;
   }
+}
+
+.main-nav__logo {
+  color: #2196f3;
+  font-family: "Raleway";
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 1.19;
+}
+.main-nav__text {
+  color: #000000;
 }
 
 .work-img {
@@ -417,6 +428,7 @@ h2 {
   background-color: rgba(0, 0, 0, 0.2);
   background-color: rgba(0, 0, 0, 0.2);
   z-index: 1;
+  overflow-y: scroll;
 }
 
 .backdrop.is-hidden {

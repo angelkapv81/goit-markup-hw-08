@@ -1,16 +1,16 @@
-// .main-nav {
+.main-nav {
 //   display: flex;
 //   align-items: center;
 //   margin: auto;
 //   width: 1200px;
-//   &__logo {
-//     @include weblogo($accent-color);
-//   }
+  &__logo {
+    @include weblogo($accent-color);
+  }
 
-//   &__text {
-//     color: $logoheader-color;
-//   }
-// }
+  &__text {
+    color: $logoheader-color;
+  }
+}
 
 // .site-nav {
 //   display: flex;
