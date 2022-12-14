@@ -2,40 +2,18 @@
   display: block;
   margin-left: auto;
   margin-right: auto;
+  // text-align: left;
   text-align: center;
-  background-color: $background-color-hero;
+    background-color: $background-color-hero;
+  padding-top: 60px;
+  padding-bottom: 60px;
+  padding-left: 15px;
+  padding-right: 15px;
 }
-// .foot-address {
-
-//   // display: flex;
-//   // margin-left: auto;
-//   // margin-right: auto;
-
-
-//   // text-align: center;
-    @include dq(desktop) {
-      .foot-address {
-        display: flex;
-        // max-width: $desktop;
-      }
-      
-    }
-//   }
-
-
-  // .t-person {
-  //   margin-left: auto;
-  //   margin-right: auto;
-  //   @include dq(only-tablet) {
-  //     max-width: $tablet;
-  //   }
-  
-  
-  
 .footer-network {
   display: block;
   margin-top: 20px;
-    justify-content: center;
+  justify-content: center;
   display: flex;
   &__img {
     fill: $hero-color;
@@ -58,25 +36,22 @@
     }
   }
 }
+
 @include dq(only-tablet) {
   .cont-footer {
     display: flex;
     margin-left: auto;
     margin-right: auto;
     justify-content: center;
-    
   }
 }
 
-@include dq(desktop){
-    .cont-footer {
+@include dq(desktop) {
+  .cont-footer {
     display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-left: auto;
-    margin-right: auto;
+      }
 }
-}
+
 .join {
   font-weight: 700;
   font-size: 14px;
@@ -86,21 +61,21 @@
 
 .main-nav__text--inverse {
   @include weblogo($hero-color);
- 
-}
+  }
 
 .logoweb {
   color: $accent-color;
 }
+
 .address {
-    font-style: normal;
+  font-style: normal;
   margin-top: 20px;
 
   &__email {
-        color: $footer-color;
+    color: $footer-color;
     font-size: 14px;
     line-height: 1.71;
-        border: 0;
+    border: 0;
     cursor: pointer;
     @extend %transition;
   }
@@ -109,7 +84,7 @@
     font-size: 14px;
     line-height: 1.71;
     margin: 0;
-        display: inline-block;
+    display: inline-block;
     border: 0;
   }
   &__tel {
@@ -122,6 +97,7 @@
     cursor: pointer;
   }
 }
+
 .foot-network {
   margin-top: 60px;
   margin-bottom: 60px;
@@ -131,8 +107,9 @@
     margin-left: 165px;
   }
 }
+
 .mail-sign {
-    @include dq(only-tablet) {
+  @include dq(only-tablet) {
     display: flex;
     justify-content: center;
     margin-left: auto;
@@ -140,6 +117,7 @@
     margin-top: 60px;
   }
 }
+
 .address__email:hover,
 .address__email:focus,
 .address__tel:hover,
@@ -150,17 +128,20 @@
 .footer-sign-sign {
   display: block;
   justify-content: center;
-
 }
 
 .input-sign {
   border: 1px solid transparent;
+  
   width: 358px;
   height: 50px;
   border-color: rgba(255, 255, 255, 0.1);
   border-radius: 4px;
   background-color: $background-color-hero;
- 
+
+  @media screen and (max-width: $phone) {
+    width: 90vw;
+  }
 }
 
 .button-sign {
@@ -196,7 +177,6 @@
   }
 }
 
-
 .label-sign-footer {
   font-weight: 700;
   font-size: 14px;
@@ -206,51 +186,54 @@
   text-transform: uppercase;
   margin-bottom: 20px;
 }
+
 @include dq(desktop) {
-.mail-sign {
+  .mail-sign {
     display: flex;
-    margin-left: 93px;
-  }
+    margin-left: 92px;
+    }
+    .footer {
+      text-align: left;
+    }
   .footer-sign-sign {
-  display: flex;
-   flex-direction: column;
-  padding-top: 12px;
-  }
+    display: flex;
+      }
 
   .input-sign {
-   padding-left: 16px;
-  display: flex;
+    padding-left: 16px;
+    display: flex;
   }
   .address {
-      margin-right: 70px;
     margin-top: 20px;
   }
   .address__footer {
     margin-bottom: 8px;
   }
   .address__email {
-         display: inline-block;
-     margin-bottom: 8px;
-  }
-  .footer-sign-sign {
-  flex-direction: column;
-  }
-  // .footer-network {
-  //   margin-bottom: 60px;
-  // }
-}
-// @include dq(desktop) {
-//   .footer {
-//     display: flex;
-//     justify-content: space-around;
-//     align-items: center;
-//   }
-// }
-
-@include dq(desktop) {
-  .foot-address {
-    display: flex;
-    // max-width: $desktop;
+    display: inline-block;
+    margin-bottom: 8px;
   }
   
+ .foot-address {
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .footer-sign {
+    display: flex;
+    justify-content: baseline;
+  }
+  .button-sign {
+    margin-left: 12px;
+    margin-top: 42px;
+  }
+  .cont-footer__blok {
+    margin-right: 92px;
+  }
+  .foot-network {
+    margin-bottom: 42px;
+    margin-top: 0;
+   } 
+
 }
+

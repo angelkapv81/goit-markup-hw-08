@@ -17,7 +17,7 @@
   }
   @include dq(desktop) {
     max-width: $desktop;
-    justify-content: space-around;
+    justify-content: space-between;
   }
   @include dq(only-phone) {
     justify-content: space-between;
@@ -101,15 +101,9 @@
     line-height: 1.17;
     letter-spacing: 0.02em;
     align-items: center;
-
-    
-
-
-
-
     @include dq(only-tablet) {
       align-items: center;
-     }
+    }
     &--lower {
       @include dq(only-tablet) {
         margin-top: 10px;
@@ -139,5 +133,8 @@
     &:hover {
       color: $accent-color;
     }
+  }
+  @include dq(desktop) {
+    margin-left: 365px;
   }
 }

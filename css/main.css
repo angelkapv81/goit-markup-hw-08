@@ -139,8 +139,9 @@ h2 {
 @media screen and (min-width: 1200px) {
   .main-nav {
     max-width: 1200px;
-    -ms-flex-pack: distribute;
-        justify-content: space-around;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
   }
 }
 @media screen and (max-width: 767.98px) {
@@ -305,18 +306,28 @@ h2 {
 .site-nav-contact__link:focus, .site-nav-contact__link:hover {
   color: #2196f3;
 }
+@media screen and (min-width: 1200px) {
+  .site-nav-contact {
+    margin-left: 365px;
+  }
+}
 
-.work-img {
+.portfolio-main {
   margin-left: auto;
   margin-right: auto;
 }
+@media screen and (max-width: 767.98px) {
+  .portfolio-main {
+    max-width: 480px;
+  }
+}
 @media screen and (min-width: 768px) and (max-width: 1199.98px) {
-  .work-img {
+  .portfolio-main {
     max-width: 768px;
   }
 }
 @media screen and (min-width: 1200px) {
-  .work-img {
+  .portfolio-main {
     max-width: 1200px;
   }
 }
@@ -391,9 +402,11 @@ h2 {
   margin: 0;
 }
 .work__item {
-  width: 450px;
+  width: 100%;
+  max-width: 450px;
   margin-left: auto;
   margin-right: auto;
+  margin-bottom: 30px;
 }
 
 .card {
@@ -439,7 +452,8 @@ h2 {
   margin-top: 4px;
 }
 .card__name {
-  width: 450px;
+  width: 100%;
+  max-width: 450px;
   padding: 20px 24px;
   outline: 1px solid #eeeeee;
 }
@@ -830,15 +844,12 @@ input:active + .modal-contact__icon {
   margin-right: auto;
   text-align: center;
   background-color: #2f303a;
+  padding-top: 60px;
+  padding-bottom: 60px;
+  padding-left: 15px;
+  padding-right: 15px;
 }
 
-@media screen and (min-width: 1200px) {
-  .foot-address {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-  }
-}
 .footer-network {
   display: block;
   margin-top: 20px;
@@ -897,14 +908,6 @@ input:active + .modal-contact__icon {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    margin-left: auto;
-    margin-right: auto;
   }
 }
 .join {
@@ -1002,6 +1005,11 @@ input:active + .modal-contact__icon {
   border-radius: 4px;
   background-color: #2f303a;
 }
+@media screen and (max-width: 480px) {
+  .input-sign {
+    width: 90vw;
+  }
+}
 
 .button-sign {
   display: -webkit-box;
@@ -1053,17 +1061,15 @@ input:active + .modal-contact__icon {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    margin-left: 93px;
+    margin-left: 92px;
+  }
+  .footer {
+    text-align: left;
   }
   .footer-sign-sign {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    padding-top: 12px;
   }
   .input-sign {
     padding-left: 16px;
@@ -1072,7 +1078,6 @@ input:active + .modal-contact__icon {
     display: flex;
   }
   .address {
-    margin-right: 70px;
     margin-top: 20px;
   }
   .address__footer {
@@ -1082,18 +1087,31 @@ input:active + .modal-contact__icon {
     display: inline-block;
     margin-bottom: 8px;
   }
-  .footer-sign-sign {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-  }
-}
-@media screen and (min-width: 1200px) {
   .foot-address {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .footer-sign {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: baseline;
+        -ms-flex-pack: baseline;
+            justify-content: baseline;
+  }
+  .button-sign {
+    margin-left: 12px;
+    margin-top: 42px;
+  }
+  .cont-footer__blok {
+    margin-right: 92px;
+  }
+  .foot-network {
+    margin-bottom: 42px;
+    margin-top: 0;
   }
 }
 .adv {
@@ -1332,12 +1350,18 @@ input:active + .modal-contact__icon {
 .team__person {
   margin-left: auto;
   margin-right: auto;
-  width: 450px;
+  width: 100%;
+  max-width: 450px;
   background-color: #ffffff;
   border: 0;
   border-radius: 0px 0px 4px 4px;
   -webkit-box-shadow: 0px 2px 1px rgba(0, 0, 0, 0.2), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12);
           box-shadow: 0px 2px 1px rgba(0, 0, 0, 0.2), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12);
+}
+@media screen and (max-width: 767px) {
+  .team__person {
+    width: 100%;
+  }
 }
 .team__name {
   color: #212121;
@@ -1536,6 +1560,7 @@ input:active + .modal-contact__icon {
   background-color: #ffffff;
   -webkit-transform: translateY(-200%);
           transform: translateY(-200%);
+  z-index: 2;
 }
 .menu-container .menu-toggle {
   position: absolute;

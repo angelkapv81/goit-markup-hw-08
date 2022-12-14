@@ -20,16 +20,6 @@ body {
   margin: -1px;
 }
 
-// .container 
-
-
-//   margin-left: auto;
-//   margin-right: auto;
-//   // -------------------------// width: 1200px;-------------------
-//   // padding-left: 15px;
-//   // padding-right: 15px;
-
-
 .mobile-site-nav__link,
 .mobile-site-nav-contact__link,
 .mobile-nav-network__link,
@@ -60,7 +50,6 @@ img {
   }
 }
 section {
-  
   margin-left: auto;
   margin-right: auto;
   @media screen and (min-width: $desktop) {
@@ -91,5 +80,5 @@ h2 {
   text-align: center;
   @include dq(desktop) {
     margin-bottom: 50px;
-}
+  }
 }

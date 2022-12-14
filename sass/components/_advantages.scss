@@ -8,7 +8,7 @@
     max-width: 768px;
   }
   @include dq(desktop) {
-     // @media screen and (min-width: $desktop) 
+    // @media screen and (min-width: $desktop)
     max-width: 1200px;
   }
 }
@@ -45,7 +45,7 @@
   }
 }
 @include dq(only-tablet) {
-  // @media screen and (min-width: $tablet) and (max-width: 1199px)  
+  // @media screen and (min-width: $tablet) and (max-width: 1199px)
   .advantage__item:nth-last-child(2) {
     margin-top: 30px;
   }
@@ -53,8 +53,8 @@
     margin-top: 30px;
   }
 }
-@include dq(desktop)  {
-  // @media screen and (min-width: $desktop)  
+@include dq(desktop) {
+  // @media screen and (min-width: $desktop)
   .advantage__item {
     margin-bottom: 0;
     // align-items:
@@ -86,9 +86,7 @@
   font-size: 14px;
   line-height: 1.71;
 }
-@include dq(only-tablet)
-  // @media screen and (min-width: $tablet) and (max-width: 1199px)
- {
+@include dq(only-tablet) {
   .advantage {
     display: flex;
     flex-wrap: wrap;
@@ -101,12 +99,11 @@
   }
 }
 
-@include dq(desktop) // @media screen and (min-width: $desktop)
- {
+@include dq(desktop) {
   .advantage {
     display: flex;
     flex-wrap: wrap;
-      }
+  }
 
   .advantage__item {
     align-items: center;

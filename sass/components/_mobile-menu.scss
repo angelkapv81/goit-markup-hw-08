@@ -6,7 +6,6 @@
   justify-content: center;
   margin: 0;
   padding: 0;
-  // background-color: transparent;
   cursor: pointer;
   border: none;
   outline: none;
@@ -18,7 +17,6 @@
     display: none;
   }
   background-color: $hero-color;
-  // padding-right: 10px;
   align-items: center;
   &:hover,
   &:focus {
@@ -39,6 +37,7 @@
   background-color: $hero-color;
   transform: translateY(-200%);
   @extend %transition;
+  z-index: 2;
 
   & .menu-toggle {
     position: absolute;

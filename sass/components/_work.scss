@@ -1,8 +1,5 @@
-
-
 /* робота */
 .images-work {
-
   display: flex;
   justify-content: center;
   &__item {
@@ -22,20 +19,16 @@
     align-items: center;
     justify-content: center;
   }
-&__name {
-  color: $hero-color;
-  font-weight: 700;
-  font-size: 14px;
-  line-height: 1.14;
-}
+  &__name {
+    color: $hero-color;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.14;
+  }
 }
 
 @media (max-width: $desktop) {
   .main-headline {
-  display: none;
-      }
+    display: none;
   }
-
-  
-    
- 
+}

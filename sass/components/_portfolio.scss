@@ -1,10 +1,12 @@
-.work-img {
+.portfolio-main {
   margin-left: auto;
   margin-right: auto;
+  @include dq(only-phone) {
+    max-width: $phone;
+  }
   @include dq(only-tablet) {
     max-width: $tablet;
   }
-
   @include dq(desktop) {
     max-width: $desktop;
   }
@@ -26,7 +28,7 @@
   margin-bottom: 40px;
 
   @include dq(only-tablet) {
-    margin-bottom: 30px;
+    margin-bottom: $item-work-gap;
   }
 
   @include dq(desktop) {
@@ -37,7 +39,7 @@
   }
   &__item:nth-child(3) {
     @include dq(only-phone) {
-      margin-right: calc(100% - 2 * 8px - 73px - 112px - 125px);
+      margin-right: calc(100% - 16px - 73px - 112px - 125px);
     }
   }
   &__item:nth-child(4),
@@ -75,25 +77,17 @@
   display: column;
   padding: 0;
   margin: 0;
-  //   margin-left: calc(-1 * $item-work-gap);
-  //   margin-top: calc(-1 * $item-work-gap);
   &__item {
-    width: 450px;
-
+    width: 100%;
+    max-width: 450px;
     margin-left: auto;
     margin-right: auto;
-
-    // flex-basis: 450px;
-
-    //     // flex-basis: calc(100% / 3 - $item-work-gap);
-    //     // margin-left: $item-work-gap;
-    //     // margin-top: $item-work-gap;
+    margin-bottom: $item-work-gap;
     @extend %transition;
   }
 }
 
 .card {
-  //   width: 450px;
   outline: none;
   text-decoration: none;
   @extend %transition;
@@ -110,16 +104,12 @@
     transform: translateY(-100%);
   }
   &__text {
-    // width: 450px;
     line-height: calc(28 / 18);
     letter-spacing: 0.03em;
     background-color: rgba(33, 150, 243, 0.9);
     color: $hero-color;
     font-weight: 400;
     font-size: 18px;
-
-    // //     width: 370px;
-
     height: 294px;
     padding: 77px 24px;
   }
@@ -142,7 +132,8 @@
     margin-top: 4px;
   }
   &__name {
-    width: 450px;
+    width: 100%;
+    max-width: 450px;
     padding: 20px 24px;
     outline: 1px solid $card-color;
     @extend %transition;
@@ -165,17 +156,15 @@
   .work__item {
     max-width: 354px;
     margin: 15px;
-    width: calc((100% - 2 * 30px) / 2);
+    width: calc((100% - 2 * $item-work-gap) / 2);
   }
 
   .card__name {
     width: 354px;
-    &--first { // Модифікатор першої картки
-        padding: 20px 24px 56px 24px;
-      }
+    &--first {
+      padding: 20px 24px 56px 24px;
+    }
   }
-
-
 }
 
 @include dq(desktop) {
@@ -187,7 +176,7 @@
   .work__item {
     max-width: 370px;
     margin: 15px;
-    width: calc((100% - 3 * 30px) / 3);
+    width: calc((100% - 3 * $item-work-gap) / 3);
   }
   .card__name {
     width: 370px;
