@@ -126,3 +126,6 @@
     background-color: rgba(33, 33, 33, 0.2);
   }
 }
+.site-nav__link--active {
+  color: $accent-color;
+}

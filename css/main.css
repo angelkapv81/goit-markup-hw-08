@@ -106,12 +106,9 @@ h2 {
   }
 }
 
-.nav {
+.main-nav {
   padding-left: 15px;
   padding-right: 15px;
-}
-
-.main-nav {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -160,11 +157,16 @@ h2 {
   color: #2196f3;
   font-family: "Raleway";
   font-weight: 700;
-  font-size: 26px;
+  font-size: 24px;
   line-height: 1.19;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+}
+@media screen and (min-width: 1200px) {
+  .main-nav__logo {
+    font-size: 26px;
+  }
 }
 .main-nav__logo--upper {
   padding-top: 16px;
@@ -245,7 +247,7 @@ h2 {
 }
 @media screen and (min-width: 768px) and (max-width: 1199.98px) {
   .site-nav-contact {
-    margin-left: 114px;
+    margin-left: 93px;
   }
 }
 .site-nav-contact__item {
@@ -285,6 +287,7 @@ h2 {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
+    font-size: 14px;
   }
 }
 .site-nav-contact__icon {
@@ -506,7 +509,6 @@ h2 {
 .primary-hero {
   text-align: center;
   background-color: #2f303a;
-  padding: 200px 0;
   width: 100%;
   height: 400px;
   max-width: 768px;
@@ -517,8 +519,16 @@ h2 {
   background-position: center;
   text-align: center;
   max-width: 1600px;
+  padding-top: 118px;
+  padding-bottom: 118px;
   background-image: -webkit-gradient(linear, left top, right top, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url(../images/hero/hero-mobile-@1x.jpg);
   background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/hero/hero-mobile-@1x.jpg);
+}
+@media screen and (min-width: 1200px) {
+  .primary-hero {
+    padding-top: 200px;
+    padding-bottom: 200px;
+  }
 }
 @media (min-device-pixel-ratio: 2), (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
   .primary-hero {
@@ -538,11 +548,6 @@ h2 {
     background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/hero/hero-tablet-@2x.jpg);
   }
 }
-@media screen and (min-width: 768px) {
-  .primary-hero {
-    padding: 118px 189px;
-  }
-}
 @media screen and (min-width: 769px) {
   .primary-hero {
     background-image: -webkit-gradient(linear, left top, right top, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url(../images/hero/hero-desktop-@1x.jpg);
@@ -557,7 +562,6 @@ h2 {
 }
 @media screen and (min-width: 1200px) {
   .primary-hero {
-    padding: 200px;
     height: 600px;
   }
 }
@@ -592,6 +596,7 @@ h2 {
   line-height: 1.88;
   letter-spacing: 0.06em;
   border-radius: 4px;
+  margin-top: 30px;
 }
 .hero-button:hover, .hero-button:focus {
   background-color: #188ce8;
@@ -921,8 +926,13 @@ input:active + .modal-contact__icon {
   color: #ffffff;
   font-family: "Raleway";
   font-weight: 700;
-  font-size: 26px;
+  font-size: 24px;
   line-height: 1.19;
+}
+@media screen and (min-width: 1200px) {
+  .main-nav__text--inverse {
+    font-size: 26px;
+  }
 }
 
 .logoweb {
@@ -1291,15 +1301,14 @@ input:active + .modal-contact__icon {
           justify-content: center;
 }
 .customers__item {
-  max-width: 210px;
   margin: 15px;
   width: calc((100% - 60px) / 2);
 }
 .customers__link {
+  height: 92px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  margin: auto;
   border: 1px solid #afb1b8;
   border-radius: 4px;
   fill: #afb1b8;
@@ -1317,13 +1326,11 @@ input:active + .modal-contact__icon {
 
 @media screen and (min-width: 768px) and (max-width: 1199.98px) {
   .customers__item {
-    max-width: 226px;
     width: calc((100% - 90px) / 3);
   }
 }
 @media screen and (min-width: 1200px) {
   .customers__item {
-    max-width: 170px;
     margin: 15px;
     width: calc((100% - 180px) / 6);
   }
@@ -1650,4 +1657,8 @@ input:active + .modal-contact__icon {
   top: 0;
   right: -10px;
   background-color: rgba(33, 33, 33, 0.2);
+}
+
+.site-nav__link--active {
+  color: #2196f3;
 }/*# sourceMappingURL=main.css.map */

@@ -22,14 +22,14 @@
   justify-content: center;
 
   &__item {
-    max-width: 210px;
+    // max-width: 210px;
     margin: 15px;
     width: calc((100% - 2 * 30px) / 2);
   }
 
   &__link {
+    height: 92px;
     display: flex;
-    margin: auto;
     border: 1px solid $logo-network-color;
     border-radius: 4px;
     fill: $logo-network-color;
@@ -51,13 +51,13 @@
 }
 @include dq(only-tablet) {
   .customers__item {
-    max-width: 226px;
+    // max-width: 226px;
     width: calc((100% - 3 * 30px) / 3);
   }
 }
 @include dq(desktop) {
   .customers__item {
-    max-width: 170px;
+    // max-width: 170px;
     margin: 15px;
     width: calc((100% - 6 * 30px) / 6);
   }
